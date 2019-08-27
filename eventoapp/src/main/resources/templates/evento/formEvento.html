@@ -13,13 +13,23 @@
 </head>  
 <body>
 	<h1>Cadastro de Eventos: </h1>
-	<form method="post">
+	<a href="/eventos" class="waves-effect waves-light btn"> <i
+		class="material-icons left">chevron_right</i> Lista de Eventos
+	</a>
+	<form class="container" method="post">
 		Nome: <input type="text" value="" name="nome"/>
-		Local: <input type="text" value="" name="local"/>
-		Data: <input type="date" value="" name="data"/>
-		Horario:<input type="text" value="" name="horario"/>
-		
-		<button type="submit">Salvar</button>
+		<div class="row">
+			<div class="input-field col 6">
+				Local: <input type="text" value="" name="local"/>
+			</div>
+			<div class="input-field col 3">
+				Data: <input type="date" value="" name="data"/>
+			</div>
+			<div class="input-field col 3">
+				Horario:<input type="text" value="" name="horario"/>
+			</div>
+		</div>
+		<button type="submit" class="waves-effect waves-light btn">Salvar</button>
 	</form>
 	<!--JavaScript at end of body for optimized loading-->
       <script type="text/javascript" src="materialize-v1.0.0/materialize/js/materialize.min.js"></script>
