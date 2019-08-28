@@ -16,11 +16,16 @@
 
 
 <body>
-	<h1>Evento</h1>
-	
-	<a href="/eventos" class="waves-effect waves-light btn"> <i
+	<nav>
+    <div class="nav-wrapper">
+    <a href="#" class="brand-logo">Evento</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/eventos" class="waves-effect waves-light btn"> <i
 		class="material-icons left">dehaze</i> Lista de Eventos
-	</a>
+	</a></li>
+      </ul>
+    </div>
+  </nav>
 	
 	<div  class="container">
 		<div class="row">
@@ -38,18 +43,23 @@
 			<button class="waves-effect waves-light btn" type="submit" >Adicionar</button>
 		</form>
 		
-		<h4>Lista Convidados: </h4>
-		<div th:each="convidado : ${convidados}">
-		
-			<div class="row">
-				<div class="input-field col s6">
-					<p><span th:text="${convidado.nomeConvidado}"></span></p>
-				</div>
-				<div class="input-field col s3">
-					<p><span th:text="${convidado.rg}"></span></p>
-				</div>
-			</div>
-		</div>
+		<table >
+			<thead>
+				<tr>
+					<th>Nome do Convidado</th>
+					<th>RG</th>
+					<th>Deletar</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="convidado : ${convidados}">
+					<td><span th:text="${convidado.nomeConvidado}"></span></td>
+					<td><span th:text="${convidado.rg}"></span></td>
+					<td><a th:href="${(#mvc.url('EC#deletarConvidado').arg(0, convidado.rg)).build()}" ><i
+				class="material-icons left">delete</i></a></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 	
 	<!--JavaScript at end of body for optimized loading-->
