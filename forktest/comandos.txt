@@ -1,0 +1,22 @@
+git clone - copia o projeto do GitHub para a maquina do usuario
+git init - inicia o repositorio
+git branch + nome do ramo -  cria um ramo novo
+git pull - atualiza o reposito do computador com as alterações feitas
+git add . - manda TODOS os arquivo presentes na maquina para o repositorio do 
+git commit -m "" - efetua as alterações nos arquivos e deixa uma mensagem 
+git push -  manda as mudança feitas nos arquivo pro repositorio
+git checkout + nome do ramo - troca de um ramo para outro
+git status - lista todos os ramosgit
+
+entre na pasta que quer fazer upload dos arquivos - > Inicie Bash Git
+git init
+git add .
+git commit -m ""
+git remote add origin https://github.com/brunaoruchi/testBru2.git   //repositorio
+git push -u origin master
+git branch nomeBranch
+git checkout nomeBranch
+git add .
+git commit -m "ArquivoAny"
+git push -u origin nomeBranch
+
